@@ -294,11 +294,11 @@ function App() {
             Premium Quality, Unbeatable Cost.
           </h2>
           <p className="text-xl text-gray-400 leading-relaxed mb-8">
-            We strategically invested in the premium, human-like voice because candidate experience is key. This quality-optimized model builds credibility with your applicants. Our low cost structure (around $0.15–$0.20 per minute) means we deliver this superior product at a highly competitive price, giving you a top-tier screening tool without the enterprise software cost.
+            We strategically invested in the premium, human-like voice because candidate experience is key. This quality-optimized model builds credibility with your applicants. Our low cost structure (around $0.25–$0.30 per minute) means we deliver this superior product at a highly competitive price, giving you a top-tier screening tool without the enterprise software cost.
           </p>
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             <div className="bg-[#212730] p-6 rounded-xl border border-cyan-500/30 hover:border-cyan-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20">
-              <p className="text-3xl font-bold text-cyan-400 mb-2">$0.15-$0.20</p>
+              <p className="text-3xl font-bold text-cyan-400 mb-2">$0.25-$0.30</p>
               <p className="text-gray-300 font-medium">Per Minute</p>
             </div>
             <div className="bg-[#212730] p-6 rounded-xl border border-emerald-500/30 hover:border-emerald-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/20">
