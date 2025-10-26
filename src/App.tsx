@@ -1,20 +1,37 @@
-import { Phone, Clock, Zap, CheckCircle, TrendingUp, Shield, BarChart3, MessageSquare, AlertTriangle, Target, Sparkles } from 'lucide-react';
+import { Phone, Clock, Zap, CheckCircle, TrendingUp, Shield, BarChart3, MessageSquare, Users, Calendar, FileX, Target, Sparkles, Instagram, Facebook, Linkedin } from 'lucide-react';
 
 function App() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-black">
       <nav className="fixed top-0 w-full bg-[#212730]/95 backdrop-blur-md border-b border-[#212730] z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="relative">
-              <Phone className="w-7 h-7 text-white" />
-              <div className="absolute -top-1 -right-1 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <div className="relative">
+                <Phone className="w-7 h-7 text-white" />
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+              </div>
+              <span className="text-xl font-bold text-white tracking-tight">Vocalent</span>
             </div>
-            <span className="text-xl font-bold text-white tracking-tight">VoiceScreen</span>
+            <div className="hidden md:flex items-center space-x-8">
+              <button onClick={() => scrollToSection('how-it-works')} className="text-gray-300 hover:text-white transition-colors duration-200">How It Works</button>
+              <button onClick={() => scrollToSection('features')} className="text-gray-300 hover:text-white transition-colors duration-200">Features</button>
+              <button onClick={() => scrollToSection('pricing')} className="text-gray-300 hover:text-white transition-colors duration-200">Pricing</button>
+              <button className="bg-[#212730] hover:bg-[#2a3340] text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 shadow-lg shadow-[#212730]/50 hover:shadow-xl hover:shadow-[#212730]/60 border border-gray-700">
+                Get Started
+              </button>
+            </div>
+            <button className="md:hidden bg-[#212730] hover:bg-[#2a3340] text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 shadow-lg shadow-[#212730]/50 hover:shadow-xl hover:shadow-[#212730]/60 border border-gray-700">
+              Menu
+            </button>
           </div>
-          <button className="bg-[#212730] hover:bg-[#2a3340] text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 shadow-lg shadow-[#212730]/50 hover:shadow-xl hover:shadow-[#212730]/60 border border-gray-700">
-            Get Started
-          </button>
         </div>
       </nav>
 
@@ -30,12 +47,12 @@ function App() {
             <span className="text-sm text-cyan-400 font-medium">Next-Gen AI Recruitment</span>
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-            Automate Your First Round.
+            Never Miss a Candidate.
             <br />
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">Screen 24/7 with a Human-Quality AI Voice.</span>
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">Screen 24/7 with AI that speaks like a human.</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Go from 100 applicants to your top 5 candidates by tomorrow morning.
+            Go from hundreds of applicants to your top picks overnight.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="group bg-[#212730] hover:bg-[#2a3340] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg shadow-[#212730]/50 hover:shadow-2xl hover:shadow-[#212730]/60 transform hover:-translate-y-1 border border-gray-700 relative overflow-hidden">
@@ -50,7 +67,7 @@ function App() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-gradient-to-b from-black to-[#0a0e14]">
+      <section id="features" className="py-20 px-6 bg-gradient-to-b from-black to-[#0a0e14]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -61,7 +78,7 @@ function App() {
             <div className="group bg-[#212730] p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative">
-                <Clock className="w-12 h-12 text-red-400 mb-4" />
+                <Calendar className="w-12 h-12 text-red-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Time Wasted on Scheduling</h3>
                 <p className="text-gray-400 leading-relaxed">
                   Recruiters waste hours on phone tag and repetitive qualifying questions instead of evaluating real talent.
@@ -71,7 +88,7 @@ function App() {
             <div className="group bg-[#212730] p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative">
-                <AlertTriangle className="w-12 h-12 text-amber-400 mb-4" />
+                <Users className="w-12 h-12 text-amber-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Lost Candidates After Hours</h3>
                 <p className="text-gray-400 leading-relaxed">
                   Top candidates apply at night and are snatched by competitors with faster follow-up times.
@@ -81,7 +98,7 @@ function App() {
             <div className="group bg-[#212730] p-8 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative">
-                <Target className="w-12 h-12 text-orange-400 mb-4" />
+                <FileX className="w-12 h-12 text-orange-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Overwhelmed by Complexity</h3>
                 <p className="text-gray-400 leading-relaxed">
                   Teams struggle with slow-to-implement, complex software that doesn't deliver results.
@@ -92,7 +109,7 @@ function App() {
         </div>
       </section>
 
-      <section className="relative py-20 px-6 overflow-hidden">
+      <section id="how-it-works" className="relative py-20 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-[#0a0e14]"></div>
         <div className="absolute inset-0">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-cyan-500/10 to-transparent rounded-full blur-3xl"></div>
@@ -193,22 +210,19 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-black/50 to-black/30 rounded-xl p-6 flex items-center justify-center border border-gray-700/50">
-                <div className="text-center">
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-cyan-500/20 blur-2xl"></div>
-                    <BarChart3 className="relative w-24 h-24 text-cyan-400 mx-auto mb-4" />
-                  </div>
-                  <p className="text-white font-medium">Dashboard Preview</p>
-                  <p className="text-sm text-gray-400 mt-2">Clean, intuitive interface<br />designed for speed</p>
-                </div>
+              <div className="bg-gradient-to-br from-black/50 to-black/30 rounded-xl p-6 flex items-center justify-center border border-gray-700/50 overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt="Analytics Dashboard"
+                  className="w-full h-full object-cover rounded-lg"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="relative py-20 px-6 overflow-hidden">
+      <section id="pricing" className="relative py-20 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-[#0a0e14]"></div>
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl"></div>
@@ -223,11 +237,11 @@ function App() {
             Premium Quality, Unbeatable Cost.
           </h2>
           <p className="text-xl text-gray-400 leading-relaxed mb-8">
-            We strategically invested in the premium, human-like voice because candidate experience is key. This quality-optimized model builds credibility with your applicants. Our low cost structure (around $0.12–$0.15 per minute) means we deliver this superior product at a highly competitive price, giving you a top-tier screening tool without the enterprise software cost.
+            We strategically invested in the premium, human-like voice because candidate experience is key. This quality-optimized model builds credibility with your applicants. Our low cost structure (around $0.15–$0.20 per minute) means we deliver this superior product at a highly competitive price, giving you a top-tier screening tool without the enterprise software cost.
           </p>
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             <div className="bg-[#212730] p-6 rounded-xl border border-cyan-500/30 hover:border-cyan-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20">
-              <p className="text-3xl font-bold text-cyan-400 mb-2">$0.12-$0.15</p>
+              <p className="text-3xl font-bold text-cyan-400 mb-2">$0.15-$0.20</p>
               <p className="text-gray-300 font-medium">Per Minute</p>
             </div>
             <div className="bg-[#212730] p-6 rounded-xl border border-emerald-500/30 hover:border-emerald-500/60 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/20">
@@ -268,13 +282,24 @@ function App() {
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Phone className="w-6 h-6 text-cyan-400" />
-            <span className="text-lg font-bold text-white">VoiceScreen</span>
+            <span className="text-lg font-bold text-white">Vocalent</span>
           </div>
           <p className="text-sm">
             Automate first-round interviews with human-quality AI voice screening.
           </p>
+          <div className="flex items-center justify-center space-x-6 mt-6">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+              <Instagram className="w-6 h-6" />
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+              <Facebook className="w-6 h-6" />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+              <Linkedin className="w-6 h-6" />
+            </a>
+          </div>
           <p className="text-xs mt-4 text-gray-600">
-            © 2025 VoiceScreen. All rights reserved.
+            © 2025 Vocalent. All rights reserved.
           </p>
         </div>
       </footer>
